@@ -1,0 +1,32 @@
+<!--Drop-down to choose Valuation Output and Period, if footballOutput is Multiple-->
+<template name="ValuationResultsOutputMultiples">
+    <div class="btn-group btn-dropdown">
+        <button class="btn btn-info btn-sm dropdown-toggle {{disableOwner}} wrapper" type="button" id="dropdownResultOutput" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="left">
+                {{valuationOutput}} ({{valuationOutputPeriod}})
+            </div>
+            <div class="right">
+                <span class="caret"></span>
+            </div>
+        </button>
+        <ul class="dropdown-menu dropdown-scroll-result" aria-labelledby="dropdownResultOutput">
+            {{#if isCompany}}
+                <li><a class="menu-result-output">EV/Revenue (LTM)</a></li>
+                {{#if isComps}}
+                    <li><a class="menu-result-output">EV/Revenue (FY1)</a></li>
+                    <li><a class="menu-result-output">EV/Revenue (FY2)</a></li>
+                {{/if}}
+                <li><a class="menu-result-output">EV/EBITDA (LTM)</a></li>
+                {{#if isComps}}
+                    <li><a class="menu-result-output">EV/EBITDA (FY1)</a></li>
+                    <li><a class="menu-result-output">EV/EBITDA (FY2)</a></li>
+                    <li><a class="menu-result-output">P/E (LTM)</a></li>
+                    <li><a class="menu-result-output">P/E (FY1)</a></li>
+                    <li><a class="menu-result-output">P/E (FY2)</a></li>
+                {{/if}}
+            {{else}}
+                <!---->
+            {{/if}}
+        </ul>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<!--Additional controls within Data Library-->
+<template name="LibraryControls">
+    {{#if isValuations}}
+        <div class="gallery-row button">
+            <div class="gallery-row-half button-row-one left">
+                {{>GalleryValuationsFootballExpand}}
+            </div>
+            <div class="gallery-row-half button-row-three left">
+                {{>GalleryValuationsFootballNew}}
+            </div>
+        </div>
+    {{else}}
+        <div class="gallery-row">
+            <div class="screen-left left">
+                {{>GalleryValuationAdd}}
+            </div>
+            <div class="screen-right right">
+                {{>GalleryValuationClear}}
+            </div>
+        </div>
+    {{/if}}
+</template>

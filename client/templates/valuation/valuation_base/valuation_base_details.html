@@ -1,0 +1,41 @@
+<!--Details shows ValuationName, description of how result is calculated.-->
+<template name="ValuationBaseDetails">
+    <div class="valuation-detail-inner wrapper">
+        <div class="valuation-detail-text left">
+            <div class="valuation-detail-name">
+                <div class="valuation-name">
+                    {{#if showName}}
+                        <div class="valuation-name-value {{disableOwner}}">
+                            {{valuationName}}
+                        </div>
+                    {{else}}
+                        <div>
+                            <form class="valuation-name-form">
+                                <div class="input-group-sm">
+                                    <input name="valuation-name-edit" id="valuation-name-edit" autocomplete="off" type="text" value="{{valuationName}}" placeholder="{{valuationName}}" class="form-control"/>
+                                </div>
+                            </form>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="valuation-detail-results wrapper">
+                {{#if isValuations}}
+                    {{#if isOutput}}
+                        <div class="detail-left">
+                            <em>{{detailOutput}} {{parenOutput.open}}{{periodOutput}}{{parenOutput.close}}&nbsp;</em>
+                        </div>
+                        <!--<div class="detail-left">-->
+                            <!--<em>{{asOf}} {{dateAbbrevComp valuationDateComp}} {{hold}}</em>-->
+                        <!--</div>-->
+                    {{/if}}
+                    <!--{{#if isValue}}-->
+                        <!--<div class="left valuation-metric">-->
+                            <!--<em>Based on {{valuationCalc}} {{detailMetric}} {{parenBuild.open}}{{periodMetric}}{{parenBuild.close}}</em>-->
+                        <!--</div>-->
+                    <!--{{/if}}-->
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

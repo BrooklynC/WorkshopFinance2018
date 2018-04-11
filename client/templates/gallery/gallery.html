@@ -1,0 +1,24 @@
+<!--Overall template for left-hand navigation-->
+<template name="Gallery">
+    <div id="gallery-inner">
+        <div id="gallery-add">
+            {{> GalleryFootballAdd}}
+        </div>
+        <div id="gallery-menu">
+            <div class="panel-group wrapper {{themeStyle.main}}" id="gallery-menu-inner" role="tablist">
+                <div class="panel panel-default">
+                    {{>GalleryControls}}
+                </div>
+                <div class="panel panel-default">
+                    {{>GalleryLibrary}}
+                </div>
+                <div class="panel panel-default">
+                    {{>GalleryCoverage}}
+                </div>
+                <div class="panel panel-default">
+                    {{>GalleryProfile}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

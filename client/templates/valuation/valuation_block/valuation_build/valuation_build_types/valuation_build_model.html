@@ -1,0 +1,40 @@
+<!--Form to add selection to Valuation with valuationType Model-->
+<template name="ValuationBuildModel">
+    <form>
+        <div class="build-prop-select wrapper left">
+            <div class="input-group input-group-sm left prop-name {{themeStyle.formInput}}">
+                <input name="modelNameAdd" id="modelNameAdd" autocomplete="off" type="text" value="" placeholder="Model" class="form-control"/>
+            </div>
+            <div class="prop-stat left">
+                <div class="btn-group btn-dropdown">
+                    <button class="btn btn-info btn-sm dropdown-toggle wrapper" type="button" id="dropdownBuildModelStat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="left">
+                            {{statTitle}}
+                        </div>
+                        <div class="right">
+                            <span class="caret"></span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-scroll-build" aria-labelledby="dropdownBuildModelStat">
+                        {{#each modelStatValues}}
+                            <li class="{{highlight}} {{disableMarket}}"><a class="menu-build-stat">{{this}}</a></li>
+                        {{/each}}
+                        <li role="separator" class="divider"></li>
+                        <li class="disabled"><a class="menu-build-stat"><strong>Multiple</strong></a></li>
+                        {{#each modelStatMultiples}}
+                            <li class="{{highlight}} {{disableMarket}}"><a class="menu-build-stat">{{this}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="input-group input-group-sm left prop-value {{themeStyle.formInput}}">
+                <input name="modelValueAdd" id="modelValueAdd" autocomplete="off" type="text" value="" placeholder="Model Value" class="form-control"/>
+            </div>
+        </div>
+        <div class="build-prop-add left wrapper">
+            <button type="submit" class="btn btn-info btn-sm btn-full {{disablePropAdd}}">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+</template>

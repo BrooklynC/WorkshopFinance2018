@@ -1,0 +1,19 @@
+<!--Drop-down menu to change Coverage-->
+<template name="CoverageMenu">
+    <div class="left screen-full">
+        <div class="btn-group btn-dropdown">
+            <button class="btn btn-info btn-sm dropdown-toggle wrapper" type="button" id="dropdownCoverage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="left">
+                    {{coverage}}
+                </div>
+                <div class="right">
+                    <span class="caret"></span>
+                </div>
+            </button>
+            <ul class="dropdown-menu dropdown-scroll" aria-labelledby="dropdownCoverage">
+                <li><a class="menu-coverage">Footballs</a></li>
+                <li><a class="menu-coverage">Targets</a></li>
+            </ul>
+        </div>
+    </div>
+</template>

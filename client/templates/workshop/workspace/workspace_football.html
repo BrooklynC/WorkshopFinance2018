@@ -1,0 +1,10 @@
+<!--Pass id of one football-->
+<template name="WorkspaceFootball">
+    {{#if Template.subscriptionsReady}}
+        {{#with currentFootballId}}
+            <div class="{{themeStyle.borderBottom}}" id="football">
+                {{>Football}}
+            </div>
+        {{/with}}
+    {{/if}}
+</template>

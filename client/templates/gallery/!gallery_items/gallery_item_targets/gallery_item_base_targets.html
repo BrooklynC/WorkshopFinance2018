@@ -1,0 +1,17 @@
+<!--Item Base for Targets in Coverage-->
+<template name="GalleryItemBaseTargets">
+    {{#if Template.subscriptionsReady}}
+        <div>
+            {{galleryTargetData.city}} {{galleryTargetData.targetName}}
+        </div>
+        {{#if isCompany}}
+        <div>
+            <em>{{capitalizeOne galleryTargetData.status}} ({{galleryTargetData.ticker}})</em>
+        </div>
+        {{else}}
+        <div>
+            <em>{{capitalizeOne galleryTargetData.league}}</em>
+        </div>
+        {{/if}}
+    {{/if}}
+</template>

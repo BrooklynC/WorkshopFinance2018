@@ -1,0 +1,18 @@
+<!--Drop down menu to change Football Output between Enterprise Value, Price per Share and Multiples-->
+<template name="FootballOutput">
+    <div class="btn-group btn-dropdown">
+        <button class="btn btn-info btn-sm dropdown-toggle wrapper {{disableOwner}}" type="button" id="dropdownOutput" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="left">
+                {{footballOutput}}
+            </div>
+            <div class="right">
+                <span class="caret"></span>
+            </div>
+        </button>
+        <ul class="dropdown-menu dropdown-scroll dropdown-right" aria-labelledby="dropdownOutput">
+            <li><a class="menu-output-text" id="Multiple">Multiple</a></li>
+            <li class="{{disableMarketGallery}}"><a class="menu-output-text">Enterprise Value</a></li>
+            <li class="{{disableMarketGallery}}"><a class="menu-output-text">Price per Share</a></li>
+        </ul>
+    </div>
+</template>

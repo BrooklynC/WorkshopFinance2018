@@ -1,0 +1,67 @@
+<!--Table used for valuationType Models-->
+<template name="ValuationBuildTableModel">
+    <table class="table table-inverse table-condensed table-valuation {{themeStyle.main}}">
+        <thead>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                <th class="table-left table-name-model">
+                    <a>Model</a>
+                </th>
+                <th class="table-left table-value-one-model">
+                    <a>Model Stat</a>
+                </th>
+                <th class="table-center table-value-two-model">
+                    <a>Model Value</a>
+                </th>
+                <th class="table-right table-value-three-model">
+                    <a>Implied Value</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each selections}}
+            <tr>
+                <td class="table-remove">
+                    <button type="button" class="btn btn-warning btn-xs btn-remove {{disableOwner}}">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+                <td class="table-left table-name-model">
+                    <a>{{modelName}}</a>
+                </td>
+                <td class="table-left table-value-one-model">
+                    <a>{{modelStat}}</a>
+                </td>
+                <td class="table-right table-value-two-model">
+                    <a>{{modelCurrency}}{{modelFormat modelValue}}{{modelMultiple}}</a>
+                </td>
+                <td class="table-right table-value-three-model">
+                    <a>{{modelImpliedCurrency}}{{modelImpliedFormat modelImplied}}{{modelImpliedMultiple}}</a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                <th class="table-left table-name-model">
+                    <a>{{calc}}:</a>
+                </th>
+                <th class="table-left table-value-one-model">
+                    &nbsp;
+                    <!--<a>{{buildOneFormat buildValueAdjusted}}</a>-->
+                </th>
+                <th class="table-left table-value-two-model">
+                    &nbsp;
+                </th>
+                <th class="table-right table-value-three-model">
+                    <a><strong>{{build.currency}}{{modelValueFormat result}}{{build.multiple}}</strong></a>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</template>

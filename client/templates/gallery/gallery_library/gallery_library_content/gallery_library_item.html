@@ -1,0 +1,23 @@
+<!--Item used in Data Library, used in Comps, Deals and Indices-->
+<template name="LibraryItem">
+    <div class="panel panel-default gallery-item-inner" id="gallery-item{{this._id}}">
+        <div class="panel-heading gallery-item-base {{themeStyle.main}} {{themeStyle.borderShaded}} wrapper">
+            <div class="gallery-item-detail left">
+                <div class="left">
+                    {{>itemBase}}
+                </div>
+                <div class="right {{isSelected}}">
+                    {{>GalleryItemSelect}}
+                </div>
+            </div>
+            <div class="gallery-item-action left">
+                {{>GalleryItemOpenLibrary}}
+            </div>
+        </div>
+        <div class="panel-collapse collapse gallery-item-block {{themeStyle.main}} {{themeStyle.borderShaded}}" id="collapse{{this._id}}" role="tabpanel">
+            <div>
+                {{>itemBlock}}
+            </div>
+        </div>
+    </div>
+</template>

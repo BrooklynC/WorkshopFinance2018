@@ -1,0 +1,17 @@
+<!--Add note to Valuation.  Click on existing note to edit.-->
+<template name="ValuationNotes">
+    <div class="valuation-note">
+        {{#if showNote}}
+            <div class="valuation-note-value {{themeStyle.borderShaded}}">
+                {{valuationNotes}}
+            </div>
+        {{else}}
+            <div class="form-group valuation-note-form">
+                <form id="notes{{valuationId}}">
+                    <textarea form="notes{{valuationId}}" class="form-control {{themeStyle.formInput}}" rows="2" name="valuation-note-edit" title="note{{valuationId}}" id="note{{valuationId}}" placeholder="{{valuationNotes}}" value="{{valuationNotes}}"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        {{/if}}
+    </div>
+</template>

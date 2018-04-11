@@ -1,0 +1,16 @@
+<!--Change FootballSpread, amount added around Valuation Result-->
+<template name="FootballSpread">
+    <div class="left controls-inc">
+        <button type="button" class="btn btn-info btn-xs {{disableOwner}}" id="spread-down">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+    </div>
+    <div class="left controls-text">
+        <p>+/- {{footballSpread}}%</p>
+    </div>
+    <div class="right controls-inc wrapper">
+        <button type="button" class="btn btn-info btn-xs right {{disableOwner}}" id="spread-up">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+    </div>
+</template>

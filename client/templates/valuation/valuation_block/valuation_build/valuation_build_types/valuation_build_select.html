@@ -1,0 +1,79 @@
+<!--Form to add selection to Valuation, searches using autocomplete for Comp Ticker or Deal Target-->
+<template name="ValuationBuildSelect">
+    <div class="build-type left">
+        <div class="btn-group btn-dropdown">
+            <button class="btn btn-info btn-sm dropdown-toggle wrapper {{disableOwner}} {{disableBuild}}" type="button" id="dropdownValuationType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="left">
+                    Type:
+                </div>
+                <div class="right">
+                    <span class="caret"></span>
+                </div>
+            </button>
+            <ul class="dropdown-menu dropdown-scroll build-type" id="type{{this._id}}">
+                <li><a class="menu-valuation-type">Comps</a></li>
+                <li><a class="menu-valuation-type">Comps Indices</a></li>
+                <li><a class="menu-valuation-type">Deals</a></li>
+                <li><a class="menu-valuation-type">Deals Indices</a></li>
+                <li class="{{disableMarket}}"><a class="menu-valuation-type">Models</a></li>
+                <li><a class="menu-valuation-type">Custom</a></li>
+            </ul>
+        </div>
+    </div>
+    {{#if isData}}
+        {{#if isSecurity}}
+            <div class="build-sector left">
+                <div class="btn-group btn-dropdown">
+                    <button class="btn btn-info btn-sm dropdown-toggle wrapper {{disableOwner}}" type="button" id="dropdownBuildSector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="left">
+                            {{sectorTitle}}:
+                        </div>
+                        <div class="right">
+                            <span class="caret"></span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-scroll-build" aria-labelledby="dropdownBuildSector">
+                        {{#each sectors}}
+                            <li><a class="build-sector-select">{{this}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        {{/if}}
+        <div class="{{buildWidth.selection}} wrapper left">
+            <form>
+                <div class="btn-group btn-dropdown {{buildWidth.options}} left">
+                    <button class="btn btn-info btn-sm dropdown-toggle {{disableNoSector}} wrapper" type="button" id="dropdownBuild" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="left">
+                            {{selectionTitle}}
+                        </div>
+                        <div class="right">
+                            <span class="caret"></span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-scroll-build dropdown-right {{disableOwner}}" aria-labelledby="dropdownBuild">
+                        {{#each options}}
+                            <li class="{{highlight}}"><a class="build-selection-select">{{option.first}} {{option.paren.open}}{{option.second}}{{option.paren.close}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="{{buildWidth.add}} left">
+                    <button type="submit" class="btn btn-info btn-sm btn-full {{disableNoSelection}}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        {{selection}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    {{/if}}
+    {{#if isModels}}
+        <div class="build-prop wrapper left">
+            {{> ValuationBuildModel}}
+        </div>
+    {{/if}}
+    {{#if isCustom}}
+        <div class="build-prop wrapper left ">
+            {{> ValuationBuildCustom}}
+        </div>
+    {{/if}}
+</template>

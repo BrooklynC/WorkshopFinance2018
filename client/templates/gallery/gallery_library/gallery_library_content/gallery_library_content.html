@@ -1,0 +1,10 @@
+<!--Series of Items within Data Library-->
+<template name="LibraryContent">
+    {{#if Template.subscriptionsReady}}
+        <div class="panel-group" id="gallery-library-items">
+            {{#each library}}
+                {{> LibraryItem}}
+            {{/each}}
+        </div>
+    {{/if}}
+</template>

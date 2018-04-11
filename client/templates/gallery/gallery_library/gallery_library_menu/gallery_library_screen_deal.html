@@ -1,0 +1,27 @@
+<!--Drop-down menu to change sectors in Deals Data Library-->
+<template name="GalleryLibraryScreenDeal">
+    <div class="btn-group btn-dropdown">
+        <button class="btn btn-info btn-sm dropdown-toggle wrapper" type="button" id="dropdownDealSector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="left">
+                {{sectorTitle}}
+            </div>
+            <div class="right">
+                <span class="caret"></span>
+            </div>
+        </button>
+        <ul class="dropdown-menu dropdown-right dropdown-scroll" aria-labelledby="dropdownDealSector">
+            <li ><a class="screen-comp-sector">Healthcare</a></li>
+            <li><a class="screen-comp-sector">Materials</a></li>
+            <li><a class="screen-comp-sector">Industrials</a></li>
+            <li><a class="screen-comp-sector">High Technology</a></li>
+            <li><a class="screen-comp-sector">Media and Entertainment</a></li>
+            <li ><a class="screen-comp-sector">Financials</a></li>
+            <li ><a class="screen-comp-sector">Real Estate</a></li>
+            <li><a class="screen-comp-sector">Consumer Staples</a></li>
+            <li><a class="screen-comp-sector">Consumer Products and Services</a></li>
+            <li><a class="screen-comp-sector">Retail</a></li>
+            <li ><a class="screen-comp-sector">Energy and Power</a></li>
+            <li><a class="screen-comp-sector">Telecommunication</a></li>
+        </ul>
+    </div>
+</template>

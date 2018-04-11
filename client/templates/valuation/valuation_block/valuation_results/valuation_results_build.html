@@ -1,0 +1,32 @@
+<!--Shows Build Value, with toggle for metric and period-->
+<template name="ValuationResultsBuild">
+    <div class="btn-group btn-dropdown">
+        <button class="btn btn-info btn-sm dropdown-toggle {{disableOwner}} wrapper" type="button" id="dropdownResultBuild" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="left">
+                {{valuationMetric}} ({{valuationPeriod}})
+            </div>
+            <div class="right">
+                <span class="caret"></span>
+            </div>
+        </button>
+        <ul class="dropdown-menu dropdown-scroll-result" aria-labelledby="dropdownResultBuild">
+            {{#if isCompany}}
+                <li><a class="menu-result-build">EV/Revenue (LTM)</a></li>
+                {{#if isComps}}
+                    <li><a class="menu-result-build">EV/Revenue (FY1)</a></li>
+                    <li><a class="menu-result-build">EV/Revenue (FY2)</a></li>
+                {{/if}}
+                <li><a class="menu-result-build">EV/EBITDA (LTM)</a></li>
+                {{#if isComps}}
+                    <li><a class="menu-result-build">EV/EBITDA (FY1)</a></li>
+                    <li><a class="menu-result-build">EV/EBITDA (FY2)</a></li>
+                    <li><a class="menu-result-build">P/E (LTM)</a></li>
+                    <li><a class="menu-result-build">P/E (FY1)</a></li>
+                    <li><a class="menu-result-build">P/E (FY2)</a></li>
+                {{/if}}
+            {{else}}
+                <!---->
+            {{/if}}
+        </ul>
+    </div>
+</template>

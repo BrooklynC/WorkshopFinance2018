@@ -1,0 +1,1 @@
+localSelections = new Mongo.Collection(null);

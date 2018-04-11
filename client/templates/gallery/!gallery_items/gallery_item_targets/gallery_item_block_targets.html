@@ -1,0 +1,15 @@
+<!--Item Block for Targets in Coverage-->
+<template name="GalleryItemBlockTargets">
+    {{#if Template.subscriptionsReady}}
+        {{#if isCompany}}
+            <div>
+                Sector: {{galleryTargetData.sector}}
+            </div>
+            <div>
+                Sub-Sector: {{galleryTargetData.subSector}}
+            </div>
+        {{else}}
+            <!---->
+        {{/if}}
+    {{/if}}
+</template>

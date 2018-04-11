@@ -1,0 +1,22 @@
+<!--Holds array of Valuations-->
+<template name="FootballFieldValuations">
+    {{#if isArray}}
+        <div id={{valuationsDrag.old}} role="tablist" class="football-field-item wrapper">
+            {{#each valuations}}
+                <div class="valuation wrapper">
+                    {{> Valuation}}
+                </div>
+            {{/each}}
+        </div>
+        <div class="wrapper" id="{{valuationsDrag.new}}">
+        </div>
+    {{else}}
+        <div class="football-field-item wrapper" role="tablist">
+            {{#with activeValuation}}
+                <div class="valuation wrapper">
+                    {{>Valuation}}
+                </div>
+            {{/with}}
+        </div>
+    {{/if}}
+</template>

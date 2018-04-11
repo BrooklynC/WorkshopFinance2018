@@ -1,0 +1,15 @@
+<!--Change date used for valuation.  Uses rajit:bootstrap3-datepicker library-->
+<template name="ValuationDate">
+    {{#if isOwner}}
+        <div class="input-group input-group-sm date disabled {{themeStyle.formDate}}" id="date{{dateId}}">
+            <input type="text" class="form-control" id="selectedDate{{dateId}}" value={{dateAbbrev valuationDate}} name="selectedDate" title="">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-th"></i>
+            </span>
+        </div>
+    {{else}}
+        <div>
+            {{dateAbbrev valuationDate}}
+        </div>
+    {{/if}}
+</template>

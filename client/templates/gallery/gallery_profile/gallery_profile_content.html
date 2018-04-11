@@ -1,0 +1,10 @@
+<!--Chooses between items and message-->
+<template name="ProfileContent">
+    {{#if Template.subscriptionsReady}}
+        <div class="panel-group" id="gallery-profile-items">
+            {{#each users}}
+                {{> ProfileItem}}
+            {{/each}}
+        </div>
+    {{/if}}
+</template>

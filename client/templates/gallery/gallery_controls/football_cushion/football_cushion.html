@@ -1,0 +1,16 @@
+<!--Changes amount of cushion to add around low and high valuations in Football Range-->
+<template name="FootballCushion">
+    <div class="left controls-inc">
+        <button type="button" class="btn btn-info btn-xs {{disableOwner}}" id="cushion-down">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+    </div>
+    <div class="left controls-text">
+        <span>{{footballCushion}}</span>
+    </div>
+    <div class="right controls-inc wrapper">
+        <button type="button" class="btn btn-info btn-xs right {{disableOwner}}" id="cushion-up">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+    </div>
+</template>

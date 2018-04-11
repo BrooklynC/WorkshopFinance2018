@@ -1,0 +1,41 @@
+<!--Admin Settings-->
+<template name="GalleryProfile">
+    <div class="panel-heading gallery-base" id="gallery-profile-base" role="tab" data-toggle="collapse" data-parent="#gallery-menu-inner" href="#gallery-profile-block" aria-expanded="false" aria-controls="gallery-profile-block">
+        <div class="gallery-base-title">
+            <h5>Profile & Settings</h5>
+        </div>
+    </div>
+    <div class="panel-collapse collapse gallery-block" id="gallery-profile-block" role="tabpanel">
+        <div id="profile-tier">
+            Membership Level: {{membership}}
+        </div>
+        <div>
+            {{>indicesCreate}}
+        </div>
+        <!--<div>-->
+            <!--<div>-->
+                <!--Notifications: {{notificationCount}}-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--Shared: {{sharedCount}}-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--Sent: {{sendCount}}-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="gallery-row">
+            <div class="gallery-row-half left">
+                Toggle Theme
+            </div>
+            <div class="gallery-row-half left">
+                <button class="btn btn-info btn-full btn-sm" type="button" name="theme-toggle" id="theme-toggle">{{themeToggle}}</button>
+            </div>
+        </div>
+        <div>
+            {{> userAdd}}
+        </div>
+        <div class="gallery-block-content gallery-items-profile">
+            {{>ProfileContent}}
+        </div>
+    </div>
+</template>

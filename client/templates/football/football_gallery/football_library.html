@@ -1,0 +1,53 @@
+<template name="FootballLibrary">
+    <div class="wrapper" id="football-library-inner">
+        <div class="{{themeStyle.borderBottom}}">
+            <h5><strong>Library</strong></h5>
+        </div>
+        <div class="wrapper" id="library-content">
+            <div class="left" id="library-left">
+                <div class="wrapper {{compsSelected}}">
+                    <button type="button" name="btn-comps" value="btn-comps" class="btn btn-comps btn-sm btn-full {{disableOwner}}" id="btn-comps">
+                        Comps
+                    </button>
+                </div>
+                <div class="wrapper {{compsIndicesSelected}}">
+                    <button type="button" name="btn-comps-indices" value="btn-comps-indices" class="btn btn-comps-indices btn-sm btn-full {{disableOwner}}" id="btn-comps-indices">
+                        Comps Indices
+                    </button>
+                </div>
+                <div class="wrapper {{dealsSelected}}">
+                    <button type="button" name="btn-deals" value="btn-deals" class="btn btn-deals btn-sm btn-full {{disableOwner}}" id="btn-deals">
+                        Deals
+                    </button>
+                </div>
+                <div class="wrapper {{dealsIndicesSelected}}">
+                    <button type="button" name="btn-deals-indices" value="btn-deals-indices" class="btn btn-deals-indices btn-sm btn-full {{disableOwner}}" id="btn-deals-indices">
+                        Deals Indices
+                    </button>
+                </div>
+                <div class="wrapper {{themeStyle.borderTop}} {{valuationsSelected}}" id="football-library-valuations">
+                    <button type="button" name="btn-valuations" value="btn-valuations" class="btn btn-valuations btn-sm btn-full {{disableOwner}}" id="btn-valuations">
+                        Valuations (Favorites)
+                    </button>
+                </div>
+            </div>
+            <div class="left" id="library-right">
+                <div class="football-screen-right {{themeStyle.borderBottom}}">
+                    {{#if nameTrue}}
+                        <div id="football-screen-name">
+                            <strong>{{libraryName}}</strong>
+                        </div>
+                    {{else}}
+                        {{> sectorScreen}}
+                    {{/if}}
+                </div>
+                <div class="gallery-block-content football-items-library">
+                    {{>LibraryContent}}
+                </div>
+                <div class="gallery-block-controls">
+                    {{>LibraryControls}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

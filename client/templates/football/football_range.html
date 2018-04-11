@@ -1,0 +1,23 @@
+<!--Consider reducing by one data point.-->
+<template name="FootballRange">
+    <div class="wrapper" id="football-range-inner">
+        <div class="left" id="football-currency">
+            <em>US$ in {{footballScale}}</em>
+        </div>
+        <div class="left wrapper" id="football-range-full">
+            <table class="table {{themeStyle.borderBottom}}" id="table-range">
+                <tr>
+                    <td>{{rangeNumber range.low}}{{rangeMultiple}}</td>
+                    <td>&nbsp;</td>
+                    <td>{{rangeNumber range.interim1}}{{rangeMultiple}}</td>
+                    <td>&nbsp;</td>
+                    <td>{{rangeNumber range.interim2}}{{rangeMultiple}}</td>
+                    <td>&nbsp;</td>
+                    <td>{{rangeNumber range.interim3}}{{rangeMultiple}}</td>
+                    <td>&nbsp;</td>
+                    <td>{{rangeNumber range.interim4}}{{rangeMultiple}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</template>

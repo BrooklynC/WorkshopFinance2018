@@ -1,0 +1,25 @@
+<!--Appears when user is logged in-->
+<template name="Workshop">
+    {{#if Template.subscriptionsReady}}
+        {{> About}}
+        <div class="{{headerLogin}}" id="header">
+            {{> Header}}
+        </div>
+        {{#if currentUser}}
+            <div class="{{themeStyle.main}}" id="workspace">
+                {{#if isActive}}
+                    {{> Workspace}}
+                {{else}}
+                    <p>This membership has been suspended.  Please contact us at brendan@workshopfinance.com.</p>
+                {{/if}}
+            </div>
+        {{else}}
+            <div id="cover">
+                {{> Cover}}
+            </div>
+        {{/if}}
+        <div class="{{footerLogin}}" id="footer">
+            {{> Footer}}
+        </div>
+    {{/if}}
+</template>

@@ -1,0 +1,33 @@
+<template name="FootballProfile">
+    <div class="wrapper" id="football-profile-inner">
+        <div class="{{themeStyle.borderBottom}}">
+            <h5><strong>Profile and Settings</strong></h5>
+        </div>
+        <div class="wrapper" id="profile-content">
+            <div class="left" id="profile-left">
+                <div>
+                    Membership Level: {{membership}}
+                </div>
+                <div class="mobile-gallery-row">
+                    <div class="gallery-row-half left">
+                        Toggle Theme
+                    </div>
+                    <div class="gallery-row-half left">
+                        <button class="btn btn-info btn-full btn-sm" type="button" name="theme-toggle" id="profile-theme-toggle">{{themeToggle}}</button>
+                    </div>
+                </div>
+                <div>
+                    {{>indicesCreate}}
+                </div>
+            </div>
+            <div class="left" id="profile-right">
+                <div>
+                    {{> userAdd}}
+                </div>
+                <div class="gallery-block-content football-items-profile">
+                    {{>ProfileContent}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

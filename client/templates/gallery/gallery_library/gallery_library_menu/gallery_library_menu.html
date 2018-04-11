@@ -1,0 +1,25 @@
+<!--Drop-down menu to change Library-->
+<template name="LibraryMenu">
+    <div class="screen-left left">
+        <div class="btn-group btn-dropdown">
+            <button class="btn btn-info btn-sm dropdown-toggle wrapper" type="button" id="dropdownLibraryFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="left">
+                    {{libraryType}}
+                </div>
+                <div class="right">
+                    <span class="caret"></span>
+                </div>
+            </button>
+            <ul class="dropdown-menu dropdown-scroll" aria-labelledby="dropdownLibraryFilter">
+                <li ><a class="menu-library-filter">Comps</a></li>
+                <li><a class="menu-library-filter">Comps Indices</a></li>
+                <li><a class="menu-library-filter">Deals</a></li>
+                <li><a class="menu-library-filter">Deals Indices</a></li>
+                <li><a class="menu-library-filter" id="menu-valuations">Valuations</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="left screen-right">
+        {{> sectorScreen}}
+    </div>
+</template>

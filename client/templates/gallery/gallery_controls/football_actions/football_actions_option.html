@@ -1,0 +1,22 @@
+<!--Input appears when Save, Send or Share is selected-->
+<template name="FootballActionsOption">
+    <form>
+        {{#if isNotNone}}
+            {{#if isDelete}}
+                <div class="left action-input">
+                    <p>Delete this football field?</p>
+                </div>
+            {{else}}
+                <div class="input-group input-group-sm left action-input {{themeStyle.formInput}}">
+                    {{> inputAutocomplete settings=settings id="selection" name="selection" class="form-control" autocomplete="off" placeholder="Add"}}
+                </div>
+            {{/if}}
+            <div class="button-row-three right action-button wrapper">
+                <button type="button" class="btn btn-info btn-sm left" id="football-action-cancel">Cancel</button>
+            </div>
+            <div class="button-row-one right action-button wrapper">
+                <button type="submit" class="btn btn-info btn-sm left" id="football-action">{{capitalizeOne action}}</button>
+            </div>
+        {{/if}}
+    </form>
+</template>

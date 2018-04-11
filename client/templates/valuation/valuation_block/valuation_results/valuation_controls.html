@@ -1,0 +1,18 @@
+<!--Buttons to Repeat, Delete or save Valuation as a Favorite-->
+<template name="ValuationControls">
+    <div class="button-control-one controls-left">
+        <button type="button" class="btn btn-info btn-sm btn-repeat {{disableOwner}} {{disableNoSelections}}">
+            Repeat
+        </button>
+    </div>
+    <div class="button-control-two controls-left">
+        <button type="button" class="btn btn-warning btn-sm btn-remove {{disableOwner}}">
+            Delete
+        </button>
+    </div>
+    <div class="button-control-three controls-left">
+        <button type="button" class="btn btn-success btn-sm btn-favorite {{disableOwner}} {{disableNoSelections}}">
+            Favorite
+        </button>
+    </div>
+</template>

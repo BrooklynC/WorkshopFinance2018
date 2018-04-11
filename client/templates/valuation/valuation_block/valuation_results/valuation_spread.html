@@ -1,0 +1,20 @@
+<!--Change ValuationSpread, amount added around Valuation Result-->
+<template name="ValuationSpread">
+    <div class="results-spread-inc left">
+        <div>
+            <button type="button" class="btn btn-info btn-xs valuation-spread-down {{disableOwner}}">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+        </div>
+    </div>
+    <div class="results-spread-text left">
+        <p>{{valuationSpread}}{{spreadPct}}</p>
+    </div>
+    <div class="results-spread-inc wrapper left">
+        <div class="right">
+            <button type="button" class="btn btn-info btn-xs valuation-spread-up {{disableOwner}}">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+        </div>
+    </div>
+</template>

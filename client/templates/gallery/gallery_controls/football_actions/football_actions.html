@@ -1,0 +1,18 @@
+<!--Drop-down menu to select actions to Save New/Send/Share/Remove Football-->
+<template name="FootballActions">
+    <div class="left button-row-one wrapper">
+        <button type="button" class="btn btn-info btn-sm btn-send {{disableOwner}} {{disableInactive}}">
+            Send
+        </button>
+    </div>
+    <div class="left button-row-two wrapper">
+        <button type="button" class="btn btn-info btn-sm btn-share {{disableOwner}} {{disableInactive}}">
+            Share
+        </button>
+    </div>
+    <div class="left button-row-three wrapper">
+        <button type="button" class="btn btn-warning btn-sm btn-delete {{disableOwner}}">
+            Delete
+        </button>
+    </div>
+</template>

@@ -1,0 +1,10 @@
+<!--Series of items within Coverage.  Used for Football Fields, Targets and Valuations-->
+<template name="CoverageContent">
+    {{#if Template.subscriptionsReady}}
+        <div class="panel-group" id="gallery-coverage-items">
+            {{#each coverage}}
+                {{> CoverageItem}}
+            {{/each}}
+        </div>
+    {{/if}}
+</template>

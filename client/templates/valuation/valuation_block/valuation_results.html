@@ -1,0 +1,59 @@
+<!--Full summary of results, including Build value and transformed value, if applicable-->
+<template name="ValuationResults">
+    <div class="valuation-results-inner">
+        <div class="valuation-results-top {{themeStyle.borderBottom}}">
+            <div class="results-row wrapper">
+                <div class="results-left left">
+                    <strong>Implied</strong>
+                </div>
+                <div class="results-right left">
+                    {{>output}}
+                </div>
+            </div>
+            <div class="results-row wrapper">
+                <div class="results-left left">
+                    <strong>of</strong>
+                </div>
+                <div class="results-right right">
+                    <p><strong>{{resultNumber result}}{{resultMultiple}} {{scale}}</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="valuation-results-scroll">
+            <div class="results-row results-row-short wrapper">
+                <div class="results-full left">
+                    <strong>Based on</strong>
+                </div>
+            </div>
+            <div class="results-row results-row-tall wrapper">
+                <div class="left results-left">
+                    {{>ValuationCalc}}
+                </div>
+                <div class="results-right right">
+                    {{>valuationResultsBuild}}
+                </div>
+            </div>
+            {{#if isCompsDeals}}
+                <div class="results-row results-row-tall wrapper">
+                    <div class="results-left left">
+                        <strong>{{asOfOption}}</strong>
+                    </div>
+                    <div class="results-right right">
+                        {{> dateOption}}
+                    </div>
+                </div>
+            {{/if}}
+            <div class="results-row results-row-short wrapper">
+                <div class="results-left left">
+                    <strong>+/-</strong>
+                </div>
+                <div class="results-right wrapper right">
+                    {{>ValuationSpread}}
+                </div>
+            </div>
+        </div>
+        <!--<div class="valuation-results-content">-->
+            <!--{{> ValuationNotes}}-->
+        <!--</div>-->
+    </div>
+</template>

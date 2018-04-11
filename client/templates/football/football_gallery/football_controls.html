@@ -1,0 +1,102 @@
+<template name="FootballControls">
+    <div class="wrapper" id="football-controls-inner">
+        <div class="{{themeStyle.borderBottom}}">
+            <h5><strong>Controls</strong></h5>
+        </div>
+        <div class="wrapper" id="football-controls">
+            <div class="wrapper {{themeStyle.borderShadedBottom}} " id="football-controls-details">
+                <div class="left mobile-controls" id="football-mobile-target">
+                    <div id="controls-result-inner wrapper">
+                        <div class="gallery-row wrapper">
+                            {{>FootballTarget}}
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper left" id="football-mobile-name">
+                    <div class="left" id="football-controls-name-title">
+                        Football Name:
+                    </div>
+                    <div class="left wrapper" id="football-controls-name">
+                        {{#if showName}}
+                            <div class="left" id="football-controls-name-value">
+                                {{footballName}}
+                            </div>
+                        {{else}}
+                            <div>
+                                <form id="football-controls-name-form">
+                                    <div class="input-group-sm left">
+                                        <input name="football-controls-name-edit" id="football-controls-name-edit" autocomplete="off" type="text" value="{{footballName}}" placeholder="{{footballName}}" class="form-control"/>
+                                    </div>
+                                </form>
+                            </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper" id="football-controls-actions">
+                <div class="left wrapper" id="football-controls-left">
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            Output Type
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballOutput}}
+                        </div>
+                    </div>
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            Scale
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballScale}}
+                        </div>
+                    </div>
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            Cushion
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballCushion}}
+                        </div>
+                    </div>
+                </div>
+                <div class="right wrapper" id="football-controls-right">
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            Current Trading
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballCurrentToggle}}
+                        </div>
+                    </div>
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            52-Week High/Low
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballTradingToggle}}
+                        </div>
+                    </div>
+                    <div class="gallery-row wrapper">
+                        <div class="controls-scroll-left left">
+                            Re-sort
+                        </div>
+                        <div class="controls-scroll-right right">
+                            {{>FootballSort}}
+                        </div>
+                    </div>
+                    <div class="wrapper" id="controls-actions">
+                        <div class="wrapper" id="controls-actions-inner">
+                            <div class="gallery-row wrapper">
+                                {{>FootballActions}}
+                            </div>
+                            <div class="gallery-row wrapper">
+                                {{>FootballActionsOption}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,101 @@
+<!--Table used for valuationType Comps or Deals-->
+<template name="ValuationBuildTableData">
+    <table class="table table-inverse table-condensed table-valuation {{themeStyle.main}}">
+        <thead>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                {{#if twoColumnHeader}}
+                    <th class="table-left table-name-one">
+                        <a>{{headingName.one}}</a>
+                    </th>
+                    <th class="table-left table-name-two">
+                        <a>{{headingName.two}}</a>
+                    </th>
+                {{else}}
+                    <th class="table-left table-name">
+                        <a>{{headingName.two}}</a>
+                    </th>
+                {{/if}}
+                <th class="table-center table-value-one">
+                    <a>{{headingValueOne}}</a>
+                </th>
+                <th class="table-center table-value-two">
+                    <a>{{headingValueTwo}}</a>
+                </th>
+                <th class="table-right table-value-three">
+                    <a>{{valuationMetric}} ({{valuationPeriod}})</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each selections}}
+            <tr>
+                <td class="table-remove">
+                    <button type="button" class="btn btn-warning btn-xs btn-remove {{disableOwner}}">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+                {{#if twoColumn}}
+                    <td class="table-left table-name-one">
+                        <a>{{selectInfo.iden}}</a>
+                    </td>
+                    <td class="table-left table-name-two">
+                        <a>{{selectCity}} {{selectInfo.name}}</a>
+                    </td>
+                {{else}}
+                    <td class="table-left table-name">
+                        {{#if isSecurity}}
+                            <a>{{companyName}} {{dealTerms.dealType}} by {{dealTerms.acquirerName}}</a>
+                        {{else}}
+                            <a>{{indexName}}</a>
+                        {{/if}}
+                    </td>
+                {{/if}}
+                <td class="table-right table-value-one">
+                    <a>{{valueOneFormat valueOne}}</a>
+                </td>
+                <td class="table-right table-value-two">
+                    <a>{{valueTwoFormat valueTwo}}</a>
+                </td>
+                <td class="table-right table-value-three">
+                    {{#if isSecurity}}
+                        <a>{{select.currency}}{{divideSelect valueOne valueTwo}}{{select.multiple}}</a>
+                    {{else}}
+                        <a>{{fixedOne valuationIndex}}{{select.multiple}}</a>
+                    {{/if}}
+                    </td>
+                </tr>
+        {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                {{#if twoColumnHeader}}
+                    <th class="table-left table-name-one">
+                        &nbsp;
+                    </th>
+                    <th class="table-left table-name-two">
+                        <a>{{calc}}:</a>
+                    </th>
+                {{else}}
+                    <th class="table-left table-name">
+                        <a>{{calc}}:</a>
+                    </th>
+                {{/if}}
+                <th class="table-right table-value-one">
+                    <a>{{buildOneFormat buildValueAdjusted}}</a>
+                </th>
+                <th class="table-right table-value-two">
+                    <a>{{buildTwoFormat targetReferenceValue}}</a>
+                </th>
+                <th class="table-right table-value-three">
+                    <a><strong>{{build.currency}}{{multipleFormat buildMultiple}}{{build.multiple}}</strong></a>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</template>

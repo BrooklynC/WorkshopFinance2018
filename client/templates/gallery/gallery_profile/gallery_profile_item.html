@@ -1,0 +1,23 @@
+<!--Item used in Settings, used for Users-->
+<template name="ProfileItem">
+    <div class="panel panel-default gallery-item-inner" id="gallery-item{{this._id}}">
+        <div class="panel-heading gallery-item-base {{themeStyle.main}} {{themeStyle.borderShaded}} wrapper">
+            <div class="gallery-item-detail left">
+                <div class="left">
+                    {{>GalleryItemBaseUsers}}
+                </div>
+                <div class="right {{select}}">
+                    {{>GalleryItemUsersActive}}
+                </div>
+            </div>
+            <div class="gallery-item-action left">
+                {{>GalleryItemOpenSettings}}
+            </div>
+        </div>
+        <div class="panel-collapse collapse {{themeStyle.main}} {{themeStyle.borderShaded}}" id="collapse{{collapseId}}" role="tabpanel">
+            <div>
+                {{>GalleryItemBlockUsers}}
+            </div>
+        </div>
+    </div>
+</template>

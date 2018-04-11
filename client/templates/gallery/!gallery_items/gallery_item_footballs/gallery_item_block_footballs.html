@@ -1,0 +1,14 @@
+<!--Item Block for Football Fields in Coverage-->
+<template name="GalleryItemBlockFootballs">
+    {{#if Template.subscriptionsReady}}
+        <div>
+            Owner: {{capitalizeOne owner}}
+        </div>
+        <div>
+            Ticker: <em>{{galleryFootballTarget.ticker}}</em>
+        </div>
+        <div>
+            # of Valuations: {{valuationCount}}
+        </div>
+    {{/if}}
+</template>

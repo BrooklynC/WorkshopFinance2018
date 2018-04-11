@@ -1,0 +1,19 @@
+<!--Football Field details-->
+<template name="FootballBanner">
+    <div class="wrapper {{themeStyle.borderBottom}}" id="football-banner-inner">
+        <div class="wrapper left" id="football-details">
+            <div id="football-details-desktop">
+                {{> FootballBannerDetails}}
+            </div>
+            <div id="football-details-mobile">
+                {{> footballDetails}}
+            </div>
+        </div>
+        <div class="left wrapper" id="football-banner-buttons">
+            {{>FootballBannerButtons}}
+        </div>
+        <div class="left wrapper" id="football-banner-workshop">
+            {{>FootballBannerWorkshop}}
+        </div>
+    </div>
+</template>

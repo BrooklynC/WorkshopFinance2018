@@ -1,0 +1,14 @@
+<!--Holds an empty bar (Valuation exists but no selections) or a full bar (selections and multiples exist)-->
+<template name="ValuationBaseBar">
+    <div class="valuation-base-bar">
+        <div class="bar-space left">
+            &nbsp;
+        </div>
+        <div class="valuation-bar-frame" data-toggle="collapse" data-parent="#football-valuations-inner" href="#collapse-bar{{this._id}}">
+            {{> barFrame}}
+        </div>
+        <div class="bar-space left">
+            &nbsp;
+        </div>
+    </div>
+</template>

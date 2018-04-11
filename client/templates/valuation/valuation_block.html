@@ -1,0 +1,53 @@
+<!--Bottom half of Valuation, including selection form, table and results-->
+<template name="ValuationBlock">
+    <div class="valuation-block-inner wrapper {{themeStyle.main}} {{themeStyle.borderTop}} {{themeStyle.borderBottom}}">
+        <div class="block-mobile">
+            <div class="valuation-block-mobile wrapper left">
+                <div class="valuation-mobile-toggle">
+                    <div class="controls-left">
+                        <button type="button" class="btn btn-info btn-sm btn-block-build {{mobileBuild}}">
+                            Build
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm btn-block-results {{mobileResult}}">
+                            Results
+                        </button>
+                    </div>
+                </div>
+                <div class="valuation-mobile-controls wrapper">
+                    {{> ValuationControls}}
+                </div>
+            </div>
+        </div>
+        <div class="block-desktop">
+            <div class="valuation-block-results left">
+                <div class="valuation-results">
+                    {{> ValuationResults}}
+                </div>
+                <div class="valuation-results-controls {{themeStyle.borderTop}} wrapper">
+                    {{> ValuationControls}}
+                </div>
+            </div>
+            <div class="valuation-block-build left">
+                <div class="valuation-build">
+                    {{> ValuationBuild}}
+                </div>
+            </div>
+        </div>
+        <div class="block-mobile">
+            {{#if isResults}}
+                <div class="valuation-block-results left">
+                    <div class="valuation-results">
+                        {{> ValuationResultsMobile}}
+                    </div>
+                </div>
+            {{/if}}
+            {{#if isBuild}}
+                <div class="valuation-block-build left">
+                    <div class="valuation-build">
+                        {{> ValuationBuild}}
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</template>

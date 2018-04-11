@@ -1,0 +1,15 @@
+<!--Two templates are overlaid on one another - one holds Current and Trading D3, other holds all valuations.-->
+<template name="FootballField">
+    {{#if Template.subscriptionsReady}}
+        <div class="wrapper top" id="football-field-inner">
+            <div id="football-field-area">
+                {{> FootballFieldArea}}
+            </div>
+            <div class="{{fieldScroll}}" id="football-field-valuations">
+                {{> FootballFieldValuations}}
+            </div>
+        </div>
+    {{else}}
+        {{> spinner}}
+    {{/if}}
+</template>

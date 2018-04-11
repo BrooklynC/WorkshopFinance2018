@@ -1,0 +1,16 @@
+<!--Shows final Output, with drop-down menu for multiple options-->
+<template name="ValuationResultsOutput">
+    {{#if isCustom}}
+        <p>{{custom}}</p>
+    {{else}}
+        {{#if isMarket}}
+            <p>{{valuationMetric}} ({{valuationPeriod}})</p>
+        {{else}}
+            {{#if isMultiple}}
+                <p>{{valuationMetric}} ({{valuationPeriod}})</p>
+            {{else}}
+                <p>{{valueOption}}</p>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</template>

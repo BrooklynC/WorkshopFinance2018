@@ -1,0 +1,41 @@
+<!--Form to add selection to Valuation with valuationType Custom-->
+<template name="ValuationBuildCustom">
+    <form>
+        <div class="build-prop-select wrapper left">
+            <div class="input-group input-group-sm left prop-name {{themeStyle.formInput}}">
+                <input name="customNameAdd" id="customNameAdd" autocomplete="off" type="text" value="" placeholder="Custom" class="form-control"/>
+            </div>
+            {{#if isCount}}
+                <div class="custom-add-menu prop-stat left">
+                    <p>{{existingCustom}}</p>
+                </div>
+            {{else}}
+                <div class="prop-stat left">
+                    <div class="btn-group btn-dropdown">
+                        <button class="btn btn-info btn-sm dropdown-toggle wrapper" type="button" id="dropdownBuildStat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="left">
+                                {{buildStat}}
+                            </div>
+                            <div class="right">
+                                <span class="caret"></span>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu dropdown-scroll-build {{disableOwner}}" aria-labelledby="dropdownBuildStat">
+                            {{#each customStat}}
+                                <li class="{{highlight}} {{disableMarket}}"><a class="menu-build-stat">{{this}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            {{/if}}
+            <div class="input-group input-group-sm left prop-value {{themeStyle.formInput}}">
+                <input name="customValueAdd" id="customValueAdd" autocomplete="off" type="text" value="" placeholder="Value" class="form-control"/>
+            </div>
+        </div>
+        <div class="build-prop-add left wrapper">
+            <button type="submit" class="btn btn-info btn-sm btn-full {{disablePropAdd}}">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+</template>

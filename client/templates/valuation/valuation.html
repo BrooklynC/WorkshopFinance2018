@@ -1,0 +1,13 @@
+<!--Only holds other templates-->
+<template name="Valuation">
+    <!--{{#if Template.subscriptionsReady}}-->
+        <div class="valuation-inner wrapper">
+            <div class="valuation-base wrapper">
+                {{> ValuationBase}}
+            </div>
+            <div class="collapse valuation-block wrapper {{valuationIn}}" id="collapse-bar{{this._id}}" role="tabpanel">
+                {{> ValuationBlock}}
+            </div>
+        </div>
+    <!--{{/if}}-->
+</template>

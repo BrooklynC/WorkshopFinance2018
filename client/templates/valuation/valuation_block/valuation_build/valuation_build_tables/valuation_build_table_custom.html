@@ -1,0 +1,57 @@
+<!--Table used for valuationType Custom-->
+<template name="ValuationBuildTableCustom">
+    <table class="table table-inverse table-condensed table-valuation {{themeStyle.main}}">
+        <thead>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                <th class="table-left table-name-custom">
+                    <a>Custom Name</a>
+                </th>
+                <th class="table-left table-desc-custom">
+                    <a>Custom Stat</a>
+                </th>
+                <th class="table-right table-value-custom">
+                    <a>Custom Value</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each selections}}
+            <tr>
+                <td class="table-remove">
+                    <button type="button" class="btn btn-warning btn-xs btn-remove {{disableOwner}}">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+                <td class="table-left table-name-custom">
+                    <a>{{customName}}</a>
+                </td>
+                <td class="table-left table-desc-custom">
+                    <a>{{stat}}</a>
+                </td>
+                <td class="table-right table-value-custom">
+                    <a>{{customCurrency}}{{customFormat value}}{{customMultiple}}</a>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="table-remove">
+                    &nbsp;
+                </th>
+                <th class="table-left table-name-custom">
+                    <a>{{calc}}:</a>
+                </th>
+                <th class="table-left table-desc-custom">
+                    &nbsp;
+                </th>
+                <th class="table-right table-value-custom">
+                    <a><strong>{{build.currency}}{{customValueFormat result}}{{build.multiple}}</strong></a>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</template>
