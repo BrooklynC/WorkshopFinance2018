@@ -14,16 +14,16 @@ App.icons({
 });
 
 //App.launchScreens({
-//    'iphone_2x': 'public/workshop_finance_splash.png',
-//    'iphone5': 'public/workshop_finance_splash.png',
-//    'iphone6': 'public/workshop_finance_splash.png',
-//    'iphone6p_portrait': 'public/workshop_finance_splash.png',
-//    'iphone6p_landscape': 'public/workshop_finance_splash.png',
-//    'ipad_portrait': 'public/workshop_finance_splash.png',
-//    'ipad_portrait_2x': 'public/workshop_finance_splash.png',
-//    'ipad_landscape': 'public/workshop_finance_splash.png',
-//    'ipad_landscape_2x': 'public/workshop_finance_splash.png'
+//    'iphone_2x': 'public/workshop_finance_logo_dark.png',
+//    'iphone5': 'public/workshop_finance_logo_dark.png',
+//    'iphone6': 'public/workshop_finance_logo_dark.png',
+//    'iphone6p_portrait': 'public/workshop_finance_logo_dark.png',
+//    'iphone6p_landscape': 'public/workshop_finance_logo_dark.png',
+//    'ipad_portrait': 'public/workshop_finance_logo_dark.png',
+//    'ipad_portrait_2x': 'public/workshop_finance_logo_dark.png',
+//    'ipad_landscape': 'public/workshop_finance_logo_dark.png',
+//    'ipad_landscape_2x': 'public/workshop_finance_logo_dark.png'
 //    // More screen sizes and platforms...
 //});
-//
+
 App.setPreference('Orientation', 'landscape', 'ios');
