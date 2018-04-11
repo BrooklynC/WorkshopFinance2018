@@ -636,6 +636,10 @@ body {
 #profile-status > div {
     width:50%;
 }
+#profile-status .dropdown-menu {
+    overflow: scroll;
+    height:120px;
+}
 /*VALUATIONS*/
 .valuation {
     display: inline-block;
@@ -1033,6 +1037,9 @@ svg {
     background-color: rgba(255, 255, 255, 1) !important;
     color: rgba(0, 0, 0, 1) !important;
 }
+#profile-status .main-light a {
+    color: rgba(0, 0, 0, 1) !important;
+}
 .border-top-light {
     border-top: solid 1px rgba(0, 0, 0, 0.5);
 }
@@ -1083,6 +1090,9 @@ svg {
 /*COLORS - DARK THEME*/
 .main-dark, .main-dark table a, .main-dark div .panel-collapse, .main-dark .-autocomplete-container, .calendar-dark + .datepicker, .calendar-dark + .datepicker div {
     background-color: rgba(20, 20, 20, 1) !important;
+    color: rgba(170, 170, 170, 1) !important;
+}
+#profile-status .main-dark a {
     color: rgba(170, 170, 170, 1) !important;
 }
 .border-top-dark {
