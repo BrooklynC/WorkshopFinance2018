@@ -21,6 +21,9 @@ Template.FootballBanner.helpers({
             case "profile":
                 return Template.FootballBannerLogo;
                 break;
+            case "about":
+                return Template.FootballBannerLogo;
+                break;
         }
     }
 });

@@ -379,16 +379,16 @@ body {
     margin-bottom:5px;
 }
 #football-details {
-    width: 40%;
+    width: 35%;
     height:100%;
     padding-left:3px;
 }
 #football-banner-buttons {
-    width: 40%;
+    width: 38%;
     height: 100%;
 }
 #football-banner-workshop {
-    width: 20%;
+    width: 27%;
     height: 100%;
     padding-right:3px;
 }
@@ -629,6 +629,12 @@ body {
     margin-top: 5px;
     overflow: auto;
     height: 160px;;
+}
+#profile-status {
+    width: 100%;
+}
+#profile-status > div {
+    width:50%;
 }
 /*VALUATIONS*/
 .valuation {

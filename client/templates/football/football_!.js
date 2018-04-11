@@ -27,6 +27,9 @@ Template.Football.helpers({
             case "profile":
                 return Template.FootballProfile;
                 break;
+            case "about":
+                return Template.FootballAbout;
+                break;
         }
     },
     top: function() {

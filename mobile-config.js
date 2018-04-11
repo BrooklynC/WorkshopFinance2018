@@ -26,4 +26,4 @@ App.icons({
 //    // More screen sizes and platforms...
 //});
 //
-App.setPreference('Orientation', 'all', 'ios');
+App.setPreference('Orientation', 'landscape', 'ios');
